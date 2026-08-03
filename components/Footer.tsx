@@ -11,7 +11,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-5 py-14 lg:px-8">
         <div className="flex flex-col gap-10 sm:flex-row sm:justify-between">
           <div className="max-w-xs">
-            <Logo dark />
+            <Logo dark tagline />
             <p className="mt-4 text-sm leading-relaxed text-cream/70">{t.footer.tagline}</p>
           </div>
 
