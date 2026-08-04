@@ -47,8 +47,6 @@ export function MethodSection() {
           </div>
         </div>
       </div>
-
-      <p className="mt-8 text-sm font-semibold text-gold-600">{t.method.footer}</p>
     </Section>
   );
 }

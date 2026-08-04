@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Manrope, Inter } from "next/font/google";
 import "./globals.css";
 import { LocaleProvider } from "@/lib/LocaleContext";
+import { Nav } from "@/components/Nav";
+import { Footer } from "@/components/Footer";
 
 const manrope = Manrope({
   subsets: ["latin", "latin-ext"],
@@ -27,7 +29,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${manrope.variable} ${inter.variable}`}>
       <body className="font-sans text-ink antialiased">
-        <LocaleProvider>{children}</LocaleProvider>
+        <LocaleProvider>
+          <Nav />
+          {children}
+          <Footer />
+        </LocaleProvider>
       </body>
     </html>
   );

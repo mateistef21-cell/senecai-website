@@ -1,10 +1,16 @@
 export type Locale = "en" | "ro";
 
-export interface ExpandableItem {
-  title: string;
-  short: string;
-  details: string;
-}
+export type IconKey =
+  | "legal"
+  | "technical"
+  | "cybersecurity"
+  | "governance"
+  | "inventory"
+  | "agentic"
+  | "privacy"
+  | "resilience"
+  | "security"
+  | "audit";
 
 export interface NavLink {
   label: string;
@@ -12,51 +18,54 @@ export interface NavLink {
 }
 
 export interface HeroContent {
-  headline: string[];
+  headlinePrefix: string;
+  headlineGold: string;
+  headlineSuffix: string;
   subhead: string;
-  tagline: string;
-  checkLabel: string;
-  checks: NavLink[];
   ctaPrimary: string;
+  secondaryCheck: string;
+  secondaryHub: string;
 }
 
-export interface PillarContent extends ExpandableItem {}
-
-export interface WhatWeDoItem extends ExpandableItem {
-  framework: string;
-}
-
-export interface IntroContent {
-  eyebrow: string;
-  whoTitle: string;
-  whoLead: string;
-  whoBold: string;
-  whoBody: string;
-  pillars: PillarContent[];
-  whatTitle: string;
-  whatLead: string;
-  whatItems: WhatWeDoItem[];
-  whatFooter: string;
-  whyTitle: string;
-  whyBody: string;
-  whoWorkTitle: string;
-  whoWorkBody: string;
-}
-
-export interface ServiceBlock {
+export interface PillarContent {
+  icon: IconKey;
   title: string;
+  short: string;
+  details: string;
+}
+
+export interface WhyChooseContent {
+  eyebrow: string;
+  title: string;
+  lead: string;
+  boldStatement: string;
+  body: string;
+  pillars: PillarContent[];
+  tagline: string;
+  cardWhyNowTitle: string;
+  cardWhyNowBody: string;
+  cardWhoWorkTitle: string;
+  cardWhoWorkBody: string;
+}
+
+export interface WhatWeDoItem {
+  icon: IconKey;
+  title: string;
+  short: string;
+  details: string;
   framework: string;
   bullets: string[];
 }
 
-export interface ServicesContent {
+export interface WhatWeDoContent {
   eyebrow: string;
   title: string;
-  intro: string;
-  blocks: ServiceBlock[];
+  lead: string;
+  items: WhatWeDoItem[];
+  footer: string;
   deliveredTitle: string;
   delivered: string[];
-  footer: string;
+  closingFooter: string;
 }
 
 export interface MethodStep {
@@ -73,7 +82,6 @@ export interface MethodContent {
   tailoredBody: string;
   onDemandTitle: string;
   onDemand: { title: string; body: string }[];
-  footer: string;
 }
 
 export interface TeamMember {
@@ -85,6 +93,8 @@ export interface TeamMember {
 export interface TeamContent {
   eyebrow: string;
   title: string;
+  photoPlaceholder: string;
+  bioPlaceholder: string;
   members: TeamMember[];
 }
 
@@ -99,12 +109,11 @@ export interface ResourceLink {
   description: string;
 }
 
-export interface ResourcesContent {
+export interface ResourcePageContent {
   eyebrow: string;
-  inDepthTitle: string;
-  inDepthLinks: ResourceLink[];
-  researchTitle: string;
-  researchLinks: ResourceLink[];
+  title: string;
+  intro: string;
+  links: ResourceLink[];
 }
 
 export interface ToolsContent {
@@ -119,9 +128,13 @@ export interface ToolsContent {
   ctaFromResult: string;
 }
 
+export interface NavContent {
+  links: NavLink[];
+  ctaPrimary: string;
+}
+
 export interface FinalCtaContent {
   title: string;
-  ctaLabel: string;
   note: string;
   formName: string;
   formEmail: string;
@@ -130,12 +143,6 @@ export interface FinalCtaContent {
   formSubmit: string;
   formSuccessTitle: string;
   formSuccessBody: string;
-}
-
-export interface NavContent {
-  links: NavLink[];
-  ctaSecondary: string;
-  ctaPrimary: string;
 }
 
 export interface FooterContent {
@@ -147,14 +154,15 @@ export interface FooterContent {
 export interface SiteContent {
   nav: NavContent;
   hero: HeroContent;
-  intro: IntroContent;
-  services: ServicesContent;
+  whyChoose: WhyChooseContent;
+  whatWeDo: WhatWeDoContent;
   method: MethodContent;
   team: TeamContent;
   testimonials: PlaceholderContent;
-  resources: ResourcesContent;
-  tools: ToolsContent;
   faq: PlaceholderContent;
   finalCta: FinalCtaContent;
   footer: FooterContent;
+  resources: ResourcePageContent;
+  research: ResourcePageContent;
+  tools: ToolsContent;
 }

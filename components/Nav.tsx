@@ -20,7 +20,6 @@ export function Nav() {
 
   return (
     <header
-      id="top"
       className={`sticky top-0 z-50 w-full border-b transition-colors duration-200 ${
         scrolled ? "border-gold-200 bg-cream-50/90 backdrop-blur" : "border-transparent bg-cream-50/60 backdrop-blur"
       }`}
@@ -28,12 +27,12 @@ export function Nav() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 lg:px-8">
         <Logo />
 
-        <div className="hidden items-center gap-7 lg:flex">
+        <div className="hidden items-center gap-5 xl:gap-6 lg:flex">
           {t.nav.links.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-ink-700 transition-colors hover:text-gold-600"
+              className="whitespace-nowrap text-sm font-medium text-ink-700 transition-colors hover:text-gold-600"
             >
               {link.label}
             </a>
@@ -42,10 +41,7 @@ export function Nav() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <LangToggle />
-          <PillButton href="#tools" variant="outline">
-            {t.nav.ctaSecondary}
-          </PillButton>
-          <PillButton href="#final-cta" variant="primary">
+          <PillButton href="/#final-cta" variant="primary">
             {t.nav.ctaPrimary}
           </PillButton>
         </div>
@@ -85,10 +81,7 @@ export function Nav() {
             <LangToggle />
           </div>
           <div className="mt-4 flex flex-col gap-3">
-            <PillButton href="#tools" variant="outline" onClick={() => setOpen(false)} className="w-full">
-              {t.nav.ctaSecondary}
-            </PillButton>
-            <PillButton href="#final-cta" variant="primary" onClick={() => setOpen(false)} className="w-full">
+            <PillButton href="/#final-cta" variant="primary" onClick={() => setOpen(false)} className="w-full">
               {t.nav.ctaPrimary}
             </PillButton>
           </div>

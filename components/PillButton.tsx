@@ -5,7 +5,7 @@ const base =
 
 const variants = {
   primary: "bg-gold-500 text-ink hover:bg-gold-400 shadow-card hover:shadow-pop active:bg-gold-600",
-  outline: "border-2 border-gold-500 text-ink hover:bg-gold-50 active:bg-gold-100",
+  outline: "border border-gold-400 bg-white text-gold-700 hover:border-gold-500 hover:bg-gold-50 active:bg-gold-100",
   dark: "bg-ink text-cream hover:bg-ink-700 shadow-card hover:shadow-pop",
   ghost: "text-ink hover:bg-gold-50",
 };

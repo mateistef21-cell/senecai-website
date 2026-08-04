@@ -5,46 +5,28 @@ import { PillButton } from "./PillButton";
 
 export function Hero() {
   const { t } = useLocale();
-  const [headlineA, headlineB] = t.hero.headline;
 
   return (
     <section className="relative overflow-hidden wave-bg">
-      <div className="mx-auto max-w-7xl px-5 pb-20 pt-16 sm:pt-24 lg:px-8 lg:pb-28 lg:pt-28">
-        <div className="max-w-3xl animate-fade-in-up">
-          <h1 className="font-headline text-[2.15rem] font-extrabold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-[3.4rem]">
-            {headlineA}
-            <br />
-            <span className="text-gold-500">{headlineB}</span>
-          </h1>
+      <div className="mx-auto max-w-4xl px-5 pb-20 pt-16 text-center sm:pt-24 lg:pb-28 lg:pt-28">
+        <h1 className="mx-auto animate-fade-in-up font-headline text-[2.15rem] font-extrabold leading-[1.12] tracking-tight text-ink sm:text-5xl lg:text-[3.2rem]">
+          {t.hero.headlinePrefix}
+          <span className="text-gold-500">{t.hero.headlineGold}</span>
+          {t.hero.headlineSuffix}
+        </h1>
 
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-slate sm:text-lg">{t.hero.subhead}</p>
+        <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate sm:text-lg">{t.hero.subhead}</p>
 
-          <p className="mt-4 text-sm font-bold uppercase tracking-[0.08em] text-ink-700 sm:text-base">
-            {t.hero.tagline}
-          </p>
-
-          <div className="mt-9">
-            <p className="mb-3 text-xs font-bold uppercase tracking-[0.14em] text-gold-600">{t.hero.checkLabel}</p>
-            <ul className="flex flex-col gap-2.5">
-              {t.hero.checks.map((check) => (
-                <li key={check.label}>
-                  <a
-                    href={check.href}
-                    className="group inline-flex items-center gap-2 text-[15px] font-semibold text-gold-600 transition-colors hover:text-gold-700"
-                  >
-                    <span aria-hidden="true" className="transition-transform group-hover:translate-x-0.5">
-                      →
-                    </span>
-                    {check.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="mt-9">
-            <PillButton href="#final-cta" variant="primary" className="px-7 py-3.5 text-[15px]">
-              {t.hero.ctaPrimary}
+        <div className="mt-9 flex flex-col items-center gap-3">
+          <PillButton href="/#final-cta" variant="primary" className="px-8 py-3.5 text-[15px]">
+            {t.hero.ctaPrimary}
+          </PillButton>
+          <div className="mt-1 flex flex-col items-center gap-3 sm:flex-row">
+            <PillButton href="/tools" variant="outline" className="text-sm">
+              {t.hero.secondaryCheck}
+            </PillButton>
+            <PillButton href="/#what-we-do" variant="outline" className="text-sm">
+              {t.hero.secondaryHub}
             </PillButton>
           </div>
         </div>

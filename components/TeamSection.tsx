@@ -23,17 +23,21 @@ export function TeamSection() {
         {t.team.members.map((member) => (
           <div
             key={member.name}
-            className={`flex items-start gap-4 rounded-2xl border p-5 shadow-card transition-shadow hover:shadow-pop ${
+            className={`flex flex-col items-center rounded-2xl border p-6 text-center shadow-card transition-shadow hover:shadow-pop ${
               member.founder ? "border-gold-400 bg-gold-50" : "border-gold-200 bg-white"
             }`}
           >
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gold-500 font-headline text-sm font-extrabold text-ink">
+            <div
+              className="relative flex h-20 w-20 items-center justify-center rounded-full border-2 border-dashed border-gold-300 bg-cream-100 text-lg font-headline font-extrabold text-gold-600"
+              role="img"
+              aria-label={t.team.photoPlaceholder}
+              title={t.team.photoPlaceholder}
+            >
               {initials(member.name)}
             </div>
-            <div>
-              <p className="font-headline text-[15px] font-bold text-ink">{member.name}</p>
-              <p className="mt-1 text-sm leading-relaxed text-slate">{member.role}</p>
-            </div>
+            <p className="mt-4 font-headline text-[15px] font-bold text-ink">{member.name}</p>
+            <p className="mt-1 text-sm leading-relaxed text-slate">{member.role}</p>
+            <p className="mt-3 text-xs italic leading-relaxed text-slate-light">{t.team.bioPlaceholder}</p>
           </div>
         ))}
       </div>

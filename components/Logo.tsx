@@ -8,7 +8,7 @@ export function Logo({
   tagline?: boolean;
 }) {
   return (
-    <a href="#top" className={`flex items-center gap-2.5 ${className}`} aria-label="SenecAI Consulting home">
+    <a href="/" className={`flex items-center gap-2.5 ${className}`} aria-label="SenecAI Consulting home">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src="/logo-mark.png" alt="" aria-hidden="true" width={36} height={39} className="h-[34px] w-auto shrink-0" />
       <span className="flex flex-col justify-center leading-none">
