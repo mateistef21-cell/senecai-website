@@ -1,5 +1,8 @@
 import { Hero } from "@/components/Hero";
 import { WhyChooseSection } from "@/components/WhyChooseSection";
+import { WhyNowSection } from "@/components/WhyNowSection";
+import { WhoWeWorkWithSection } from "@/components/WhoWeWorkWithSection";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { WhatWeDoSection } from "@/components/WhatWeDoSection";
 import { MethodSection } from "@/components/MethodSection";
 import { TeamSection } from "@/components/TeamSection";
@@ -11,10 +14,12 @@ export default function Home() {
     <main>
       <Hero />
       <WhyChooseSection />
+      <WhyNowSection />
+      <WhoWeWorkWithSection />
+      <TestimonialsSection />
       <WhatWeDoSection />
       <MethodSection />
       <TeamSection />
-      <PlaceholderSection id="testimonials" section="testimonials" tone="white" />
       <PlaceholderSection id="faq" section="faq" tone="cream" />
       <FinalCtaSection />
     </main>

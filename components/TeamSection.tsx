@@ -18,13 +18,13 @@ export function TeamSection() {
   const { t } = useLocale();
 
   return (
-    <Section id="team" eyebrow={t.team.eyebrow} title={t.team.title} tone="cream">
+    <Section id="team" eyebrow={t.team.eyebrow} title={t.team.title} tone="white">
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {t.team.members.map((member) => (
           <div
             key={member.name}
             className={`flex flex-col items-center rounded-2xl border p-6 text-center shadow-card transition-shadow hover:shadow-pop ${
-              member.founder ? "border-gold-400 bg-gold-50" : "border-gold-200 bg-white"
+              member.founder ? "border-gold-400 bg-gold-50" : "border-gold-200 bg-cream-50"
             }`}
           >
             <div

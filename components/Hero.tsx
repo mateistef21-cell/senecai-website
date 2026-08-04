@@ -2,13 +2,15 @@
 
 import { useLocale } from "@/lib/LocaleContext";
 import { PillButton } from "./PillButton";
+import { EuropeMapBackground } from "./EuropeMapBackground";
 
 export function Hero() {
   const { t } = useLocale();
 
   return (
     <section className="relative overflow-hidden wave-bg">
-      <div className="mx-auto max-w-4xl px-5 pb-20 pt-16 text-center sm:pt-24 lg:pb-28 lg:pt-28">
+      <EuropeMapBackground />
+      <div className="relative mx-auto max-w-4xl px-5 pb-20 pt-16 text-center sm:pt-24 lg:pb-28 lg:pt-28">
         <h1 className="mx-auto animate-fade-in-up font-headline text-[2.15rem] font-extrabold leading-[1.12] tracking-tight text-ink sm:text-5xl lg:text-[3.2rem]">
           {t.hero.headlinePrefix}
           <span className="text-gold-500">{t.hero.headlineGold}</span>

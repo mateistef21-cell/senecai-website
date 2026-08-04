@@ -36,16 +36,12 @@ export interface PillarContent {
 
 export interface WhyChooseContent {
   eyebrow: string;
-  title: string;
-  lead: string;
-  boldStatement: string;
-  body: string;
+  headline: string;
+  subtitleLarge: string;
+  bodyPara1: string;
+  bodyPara2: string;
+  floatingLine: string;
   pillars: PillarContent[];
-  tagline: string;
-  cardWhyNowTitle: string;
-  cardWhyNowBody: string;
-  cardWhoWorkTitle: string;
-  cardWhoWorkBody: string;
 }
 
 export interface WhatWeDoItem {
@@ -60,11 +56,14 @@ export interface WhatWeDoItem {
 export interface WhatWeDoContent {
   eyebrow: string;
   title: string;
-  lead: string;
+  introHeadline: string;
+  introPara1: string;
+  introPara2: string;
   items: WhatWeDoItem[];
-  footer: string;
   deliveredTitle: string;
+  deliveredIntro: string;
   delivered: string[];
+  deliveredClosing: string;
   closingFooter: string;
 }
 
@@ -78,7 +77,6 @@ export interface MethodContent {
   eyebrow: string;
   title: string;
   steps: MethodStep[];
-  tailoredTitle: string;
   tailoredBody: string;
   onDemandTitle: string;
   onDemand: { title: string; body: string }[];
@@ -102,6 +100,11 @@ export interface PlaceholderContent {
   eyebrow: string;
   title: string;
   body: string;
+}
+
+export interface TestimonialsContent extends PlaceholderContent {
+  partnersLabel: string;
+  partnersPlaceholder: string;
 }
 
 export interface ResourceLink {
@@ -155,10 +158,12 @@ export interface SiteContent {
   nav: NavContent;
   hero: HeroContent;
   whyChoose: WhyChooseContent;
+  whyNow: PlaceholderContent;
+  whoWeWorkWith: PlaceholderContent;
   whatWeDo: WhatWeDoContent;
   method: MethodContent;
   team: TeamContent;
-  testimonials: PlaceholderContent;
+  testimonials: TestimonialsContent;
   faq: PlaceholderContent;
   finalCta: FinalCtaContent;
   footer: FooterContent;

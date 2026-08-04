@@ -9,7 +9,7 @@ export function PlaceholderSection({
   tone = "white",
 }: {
   id: string;
-  section: "testimonials" | "faq";
+  section: "faq";
   tone?: "white" | "cream";
 }) {
   const { t } = useLocale();

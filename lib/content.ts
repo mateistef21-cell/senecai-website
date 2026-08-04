@@ -18,28 +18,31 @@ export const content: Record<Locale, SiteContent> = {
       headlineGold: "EU digital compliance",
       headlineSuffix: " in the AI era",
       subhead:
-        "Understand, implement, and govern your obligations under the AI Act, GDPR, DORA, NIS2 and the wider EU digital rulebook – through one multidisciplinary team and the SenecAI Governance Hub.",
+        "Understand, implement, and govern your obligations under the AI Act, GDPR, DORA, NIS2 and turn compliance into your competitive advantage.",
       ctaPrimary: "Book a free intro call",
       secondaryCheck: "Not sure where you stand? Take our checker",
       secondaryHub: "Explore the SenecAI Governance Hub",
     },
     whyChoose: {
       eyebrow: "Why Choose SenecAI",
-      title: "Why Choose SenecAI",
-      lead: "We are a multidisciplinary team of legal, AI, and cybersecurity experts helping companies comply with the AI Act, GDPR, and the wider EU digital rulebook.",
-      boldStatement: "Digital compliance no longer belongs to one discipline. Neither do we.",
-      body: "Traditional law firms understand the regulation but not the technology. Technical auditors understand the systems but not the law. We bring both together, in one team, coordinated through the SenecAI Governance Hub.",
+      headline: "Introducing SenecAI: Our multi-disciplinary expertise — at your service",
+      subtitleLarge: "LEGAL. TECHNICAL. CYBERSECURITY. ONE GOVERNANCE HUB.",
+      bodyPara1:
+        "We are a team of legal, AI and cybersecurity experts helping companies comply with the AI Act, GDPR, and the wider EU digital rulebook.",
+      bodyPara2:
+        "We created an integrated approach to EU digital governance, offering end-to-end compliance services — from legal interpretation and obligation mapping to AI technical audit and cybersecurity controls, all tied together by a robust quality management system feeding into the SenecAI Governance Hub.",
+      floatingLine: "Digital compliance no longer belongs to one discipline. Neither do we.",
       pillars: [
         {
           icon: "legal",
-          title: "Legal Expertise",
+          title: "Legal Acumen",
           short: "Navigate Europe's evolving digital rulebook with confidence.",
           details:
             "Our legal experts help you interpret and implement the AI Act, GDPR, DORA, NIS2, the Cyber Resilience Act, and other applicable frameworks. From determining your regulatory role and obligations to preparing documentation and supporting conformity assessments, we ensure your compliance strategy is legally sound and aligned with your business objectives.",
         },
         {
           icon: "technical",
-          title: "Technical AI Expertise",
+          title: "Technical AI Capabilities",
           short: "Govern AI systems beyond legal compliance.",
           details:
             "Our AI engineers help you understand how your AI systems are built, deployed, and operated. We perform AI inventories, technical assessments, risk classification, model evaluations, and governance reviews to ensure your systems are compliant by design — not just compliant on paper.",
@@ -60,18 +63,25 @@ export const content: Record<Locale, SiteContent> = {
             "The SenecAI Governance Hub brings legal advice, technical assessments, cybersecurity activities, and compliance documentation into one structured governance process. Every engagement follows the same methodology — from discovery and gap assessment to implementation and continuous governance — giving your organization one clear view of its compliance obligations and progress.",
         },
       ],
-      tagline: "Legal. Technical. Cybersecurity. One governance approach.",
-      cardWhyNowTitle: "Why now",
-      cardWhyNowBody:
-        "The EU has built a digital constitution spanning the AI Act, GDPR, DORA, NIS2, and the CRA. Most companies fall under several at once. We lead with what you're building — not the acronyms.",
-      cardWhoWorkTitle: "Who we work with",
-      cardWhoWorkBody:
-        "Tech companies, AI-native startups, organizations in regulated industries, and any company that wants compliance to be a competitive advantage.",
+    },
+    whyNow: {
+      eyebrow: "Why now",
+      title: "The EU has been building a Digital Constitution.",
+      body: "The AI Act, GDPR, DORA, NIS2 and the CRA don't exist in isolation. Most organizations are subject to several at once. We help you understand what applies, prioritize what matters, and build one governance approach instead of managing regulations one at a time.",
+    },
+    whoWeWorkWith: {
+      eyebrow: "Who we work with",
+      title: "Who we work with",
+      body: "Tech companies, AI-native startups, organizations in regulated industries, and any company that wants compliance to be a competitive advantage.",
     },
     whatWeDo: {
       eyebrow: "What we do",
       title: "What we do",
-      lead: "We are the compliance partners for tech and regulated companies. Our expertise across legal, technical, AI/ML, and cyber covers all bases of the EU digital regulatory framework. We offer an integrated and structured approach to digital compliance, delivered through expert services and powered by the SenecAI Governance Hub.",
+      introHeadline: "The governance capabilities that drive compliance.",
+      introPara1:
+        "We don't approach compliance one regulation at a time. We approach it through the governance capabilities every organization needs to build. Whether you're subject to the AI Act, GDPR, DORA, NIS2, the CRA or international standards such as ISO 42001 and ISO 27001, we identify what applies, assess your current state, and help you implement the measures that matter.",
+      introPara2:
+        "Each governance capability below maps to one or more regulatory frameworks — but you shouldn't have to think in acronyms to understand your obligations. We do that translation for you.",
       items: [
         {
           icon: "inventory",
@@ -150,20 +160,20 @@ export const content: Record<Locale, SiteContent> = {
           ],
         },
       ],
-      footer:
-        "Underneath each of these sits the relevant EU framework — the AI Act, GDPR, DORA, NIS2, CRA — but you shouldn't have to think in regulations to know what you need. We do that translation for you.",
       deliveredTitle: "Delivered through",
+      deliveredIntro: "Every engagement combines the expertise needed to implement these governance capabilities:",
       delivered: [
-        "Legal consultancy across all six areas",
-        "Technical AI audit: reviewing your AI systems to ensure they're built and run compliantly",
-        "Cybersecurity services: from ISO 27001 certification to penetration testing and protection against prompt injection and adversarial attacks",
-        "The SenecAI Governance Hub, which ties it all together — included as part of working with us, not sold separately",
+        "Legal consultancy across all six governance areas.",
+        "Technical AI audits to assess AI systems, risk classification, model governance and compliance by design.",
+        "Cybersecurity services ranging from ISO 27001 implementation and penetration testing to resilience assessments and security controls.",
       ],
+      deliveredClosing:
+        "All of it is coordinated through the SenecAI Governance Hub, included with every engagement to provide one place to manage documentation, obligations, implementation and ongoing governance.",
       closingFooter: "Depending on your needs and objectives, we may activate all six areas — or just one.",
     },
     method: {
-      eyebrow: "The SenecAI Method",
-      title: "The SenecAI Method",
+      eyebrow: "Our Collaboration Framework",
+      title: "Our Collaboration Framework",
       steps: [
         {
           number: "01",
@@ -191,10 +201,9 @@ export const content: Record<Locale, SiteContent> = {
           body: "Compliance doesn't stop at execution. The SenecAI Governance Hub keeps tracking your obligations, documentation, and implementation status after the initial engagement concludes — turning a one-time project into an ongoing governance capability. Every engagement includes access to the SenecAI Governance Hub.",
         },
       ],
-      tailoredTitle: "Tailored support",
       tailoredBody:
-        "We don't believe in one-size-fits-all. The steps above are indicative. We offer tailored compliance strategies customized to your organization's level of readiness, objectives, and budget.",
-      onDemandTitle: "On-demand",
+        "We realize this framework might not work best for all. And we don't believe in one-size-fits-all. We offer tailored compliance strategies customized to your organization's level of readiness, objectives, and budget.",
+      onDemandTitle: "Maybe what best works for you:",
       onDemand: [
         { title: "Hourly consulting", body: "for scoping, strategy, and specific questions" },
         { title: "Project-based", body: "punctual documentation review, cybersecurity controls, ISO certification consulting" },
@@ -219,9 +228,11 @@ export const content: Record<Locale, SiteContent> = {
       ],
     },
     testimonials: {
-      eyebrow: "Testimonials & case studies",
-      title: "Testimonials & case studies",
+      eyebrow: "Testimonials & Partners",
+      title: "Testimonials & Partners",
       body: "Coming soon — we'll populate this space with client stories once engagements can be referenced publicly.",
+      partnersLabel: "Partners we work with",
+      partnersPlaceholder: "Partner logo",
     },
     faq: {
       eyebrow: "FAQ",
@@ -323,28 +334,31 @@ export const content: Record<Locale, SiteContent> = {
       headlineGold: "conformarea digitală în UE",
       headlineSuffix: ", în era AI",
       subhead:
-        "Înțelege, implementează și guvernează-ți obligațiile din AI Act, GDPR, DORA, NIS2 și restul cadrului digital european — printr-o singură echipă multidisciplinară și SenecAI Governance Hub.",
+        "Înțelege, implementează și guvernează-ți obligațiile din AI Act, GDPR, DORA, NIS2 și transformă conformarea într-un avantaj competitiv.",
       ctaPrimary: "Programează un apel introductiv gratuit",
       secondaryCheck: "Nu știi unde te încadrezi? Fă testul",
       secondaryHub: "Explorează SenecAI Governance Hub",
     },
     whyChoose: {
       eyebrow: "De ce SenecAI",
-      title: "De ce SenecAI",
-      lead: "Suntem o echipă multidisciplinară de experți juridici, AI și cybersecurity care ajută companiile să se conformeze cu AI Act, GDPR și restul cadrului digital european.",
-      boldStatement: "Conformarea digitală nu mai aparține unei singure discipline. Nici noi.",
-      body: "Firmele de avocatură tradiționale înțeleg reglementarea, dar nu tehnologia. Auditorii tehnici înțeleg sistemele, dar nu legislația. Noi le aducem pe amândouă împreună, într-o singură echipă, coordonată prin SenecAI Governance Hub.",
+      headline: "Prezentăm SenecAI: expertiza noastră multidisciplinară — în slujba ta",
+      subtitleLarge: "JURIDIC. TEHNIC. CYBERSECURITY. UN SINGUR GOVERNANCE HUB.",
+      bodyPara1:
+        "Suntem o echipă de experți juridici, AI și cybersecurity care ajută companiile să se conformeze cu AI Act, GDPR și restul cadrului digital european.",
+      bodyPara2:
+        "Am creat o abordare integrată a guvernanței digitale europene, oferind servicii de conformare de la un capăt la altul — de la interpretare juridică și maparea obligațiilor, până la audit tehnic AI și controale de cybersecurity, toate legate printr-un sistem robust de management al calității care alimentează SenecAI Governance Hub.",
+      floatingLine: "Conformarea digitală nu mai aparține unei singure discipline. Nici noi.",
       pillars: [
         {
           icon: "legal",
-          title: "Expertiză juridică",
+          title: "Perspicacitate juridică",
           short: "Navighează cu încredere cadrul digital european, aflat în continuă evoluție.",
           details:
             "Experții noștri juridici te ajută să interpretezi și să implementezi AI Act, GDPR, DORA, NIS2, Cyber Resilience Act și alte cadre aplicabile. De la stabilirea rolului și obligațiilor tale de reglementare, până la pregătirea documentației și susținerea evaluărilor de conformitate, ne asigurăm că strategia ta de conformare este solidă din punct de vedere juridic și aliniată cu obiectivele afacerii.",
         },
         {
           icon: "technical",
-          title: "Expertiză tehnică AI",
+          title: "Capabilități tehnice AI",
           short: "Guvernează sistemele AI dincolo de conformarea juridică.",
           details:
             "Inginerii noștri AI te ajută să înțelegi cum sunt construite, implementate și operate sistemele tale AI. Realizăm inventare AI, evaluări tehnice, clasificări de risc, evaluări de modele și revizuiri de guvernanță, pentru ca sistemele tale să fie conforme prin proiectare — nu doar pe hârtie.",
@@ -365,18 +379,25 @@ export const content: Record<Locale, SiteContent> = {
             "SenecAI Governance Hub reunește consultanța juridică, evaluările tehnice, activitățile de cybersecurity și documentația de conformare într-un singur proces structurat de guvernanță. Fiecare colaborare urmează aceeași metodologie — de la descoperire și evaluarea decalajelor, până la implementare și guvernanță continuă — oferind organizației tale o imagine clară a obligațiilor și progresului în materie de conformare.",
         },
       ],
-      tagline: "Juridic. Tehnic. Cybersecurity. O singură abordare de guvernanță.",
-      cardWhyNowTitle: "De ce acum",
-      cardWhyNowBody:
-        "UE a construit o constituție digitală formată din AI Act, GDPR, DORA, NIS2 și CRA. Majoritatea companiilor se încadrează la mai multe simultan. Pornim de la ce construiești — nu de la acronime.",
-      cardWhoWorkTitle: "Cu cine lucrăm",
-      cardWhoWorkBody:
-        "Companii tech, startup-uri AI-native, organizații din industrii reglementate și orice companie care vrea ca respectarea reglementărilor să devină un avantaj competitiv.",
+    },
+    whyNow: {
+      eyebrow: "De ce acum",
+      title: "UE a construit o Constituție Digitală.",
+      body: "AI Act, GDPR, DORA, NIS2 și CRA nu există izolat. Majoritatea organizațiilor se supun mai multora simultan. Te ajutăm să înțelegi ce ți se aplică, să prioritizezi ce contează și să construiești o singură abordare de guvernanță, în loc să gestionezi reglementările una câte una.",
+    },
+    whoWeWorkWith: {
+      eyebrow: "Cu cine lucrăm",
+      title: "Cu cine lucrăm",
+      body: "Companii tech, startup-uri AI-native, organizații din industrii reglementate și orice companie care vrea ca respectarea reglementărilor să devină un avantaj competitiv.",
     },
     whatWeDo: {
       eyebrow: "Ce facem",
       title: "Ce facem",
-      lead: "Suntem partenerul de conformare pentru companii tech și industrii reglementate. Expertiza noastră juridică, tehnică, AI/ML și cyber acoperă toate ariile cadrului de reglementare digital european. Oferim o abordare integrată și structurată a conformării digitale, livrată prin servicii de specialitate și susținută de SenecAI Governance Hub.",
+      introHeadline: "Capabilitățile de guvernanță care asigură conformarea.",
+      introPara1:
+        "Nu abordăm conformarea o reglementare pe rând. O abordăm prin capabilitățile de guvernanță de care are nevoie orice organizație. Fie că te supui AI Act, GDPR, DORA, NIS2, CRA sau unor standarde internaționale precum ISO 42001 și ISO 27001, identificăm ce se aplică, evaluăm starea ta actuală și te ajutăm să implementezi măsurile care contează.",
+      introPara2:
+        "Fiecare capabilitate de guvernanță de mai jos corespunde uneia sau mai multor cadre de reglementare — dar nu ar trebui să fii nevoit să gândești în acronime ca să îți înțelegi obligațiile. Facem noi această traducere pentru tine.",
       items: [
         {
           icon: "inventory",
@@ -454,20 +475,20 @@ export const content: Record<Locale, SiteContent> = {
           ],
         },
       ],
-      footer:
-        "Sub fiecare dintre acestea se află cadrul UE relevant — AI Act, GDPR, DORA, NIS2, CRA — dar nu ar trebui să fii nevoit să gândești în termeni de reglementări ca să știi de ce ai nevoie. Facem noi această traducere pentru tine.",
       deliveredTitle: "Livrate prin",
+      deliveredIntro: "Fiecare colaborare combină expertiza necesară pentru a implementa aceste capabilități de guvernanță:",
       delivered: [
-        "Consultanță juridică pentru toate cele șase arii",
-        "Audit tehnic AI: revizuirea sistemelor tale AI pentru a te asigura că sunt construite și rulate conform",
-        "Servicii de cybersecurity: de la certificare ISO 27001 la teste de penetrare și protecție împotriva prompt injection și atacurilor adversariale",
-        "SenecAI Governance Hub, care leagă totul — inclus în colaborarea cu noi, nu vândut separat",
+        "Consultanță juridică pentru toate cele șase arii de guvernanță.",
+        "Audituri tehnice AI pentru evaluarea sistemelor AI, clasificarea riscului, guvernanța modelelor și conformitate prin proiectare.",
+        "Servicii de cybersecurity, de la implementare ISO 27001 și teste de penetrare, până la evaluări de reziliență și controale de securitate.",
       ],
+      deliveredClosing:
+        "Totul este coordonat prin SenecAI Governance Hub, inclus în fiecare colaborare, pentru a oferi un singur loc în care gestionezi documentația, obligațiile, implementarea și guvernanța continuă.",
       closingFooter: "În funcție de nevoile și obiectivele tale, putem activa toate cele șase arii — sau doar una.",
     },
     method: {
-      eyebrow: "Metoda SenecAI",
-      title: "Metoda SenecAI",
+      eyebrow: "Cadrul nostru de colaborare",
+      title: "Cadrul nostru de colaborare",
       steps: [
         {
           number: "01",
@@ -495,10 +516,9 @@ export const content: Record<Locale, SiteContent> = {
           body: "Conformarea nu se oprește la implementare. SenecAI Governance Hub continuă să monitorizeze obligațiile, documentația și stadiul implementării după încheierea colaborării inițiale — transformând un proiect punctual într-o capabilitate de guvernanță continuă. Fiecare colaborare include acces la SenecAI Governance Hub.",
         },
       ],
-      tailoredTitle: "Suport personalizat",
       tailoredBody:
-        "Nu credem în soluții universale. Pașii de mai sus sunt orientativi. Oferim strategii de conformare personalizate, adaptate nivelului de pregătire, obiectivelor și bugetului organizației tale.",
-      onDemandTitle: "La cerere",
+        "Ne dăm seama că acest cadru s-ar putea să nu fie potrivit pentru toată lumea. Și nu credem în soluții universale. Oferim strategii de conformare personalizate, adaptate nivelului de pregătire, obiectivelor și bugetului organizației tale.",
+      onDemandTitle: "Ce ți se potrivește cel mai bine:",
       onDemand: [
         { title: "Consultanță pe oră", body: "pentru scoping, strategie și întrebări punctuale" },
         { title: "Pe bază de proiect", body: "revizuire punctuală de documentație, controale de cybersecurity, consultanță pentru certificare ISO" },
@@ -523,9 +543,11 @@ export const content: Record<Locale, SiteContent> = {
       ],
     },
     testimonials: {
-      eyebrow: "Testimoniale și studii de caz",
-      title: "Testimoniale și studii de caz",
+      eyebrow: "Testimoniale și parteneri",
+      title: "Testimoniale și parteneri",
       body: "În curând — vom completa această secțiune cu poveștile clienților noștri, de îndată ce colaborările pot fi menționate public.",
+      partnersLabel: "Parteneri cu care lucrăm",
+      partnersPlaceholder: "Logo partener",
     },
     faq: {
       eyebrow: "Întrebări frecvente",

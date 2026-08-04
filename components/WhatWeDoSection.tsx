@@ -10,7 +10,7 @@ function ItemCard({ item, index, moreLabel, lessLabel }: { item: WhatWeDoItem; i
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="flex flex-col rounded-2xl border border-gold-200 bg-white p-6 shadow-card transition-shadow hover:shadow-pop">
+    <div className="flex flex-col rounded-2xl border border-gold-200 bg-cream-50 p-6 shadow-card transition-shadow hover:shadow-pop">
       <div className="mb-4 flex items-center justify-between">
         <span className="flex h-11 w-11 items-center justify-center rounded-full bg-gold-100 text-gold-700">
           <Icon name={item.icon} className="h-5 w-5" />
@@ -56,17 +56,19 @@ export function WhatWeDoSection() {
   const lessLabel = locale === "ro" ? "Restrânge" : "Show less";
 
   return (
-    <Section id="what-we-do" eyebrow={t.whatWeDo.eyebrow} title={t.whatWeDo.title} intro={t.whatWeDo.lead} tone="cream">
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    <Section id="what-we-do" eyebrow={t.whatWeDo.eyebrow} title={t.whatWeDo.introHeadline} tone="white">
+      <p className="max-w-2xl text-base leading-relaxed text-slate">{t.whatWeDo.introPara1}</p>
+      <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate">{t.whatWeDo.introPara2}</p>
+
+      <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {t.whatWeDo.items.map((item, i) => (
           <ItemCard key={item.title} item={item} index={i} moreLabel={moreLabel} lessLabel={lessLabel} />
         ))}
       </div>
 
-      <p className="mt-8 max-w-2xl text-sm leading-relaxed text-slate">{t.whatWeDo.footer}</p>
-
       <div className="mt-8 rounded-2xl border border-gold-200 bg-ink px-6 py-10 text-cream sm:px-10">
         <h3 className="font-headline text-xl font-bold">{t.whatWeDo.deliveredTitle}</h3>
+        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-cream/85">{t.whatWeDo.deliveredIntro}</p>
         <ul className="mt-5 grid gap-3 sm:grid-cols-2">
           {t.whatWeDo.delivered.map((line) => (
             <li key={line} className="flex gap-2.5 text-sm leading-relaxed text-cream/85">
@@ -75,6 +77,7 @@ export function WhatWeDoSection() {
             </li>
           ))}
         </ul>
+        <p className="mt-6 max-w-2xl text-sm leading-relaxed text-cream/85">{t.whatWeDo.deliveredClosing}</p>
       </div>
 
       <p className="mt-8 max-w-2xl text-sm leading-relaxed text-slate">{t.whatWeDo.closingFooter}</p>
