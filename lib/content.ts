@@ -25,7 +25,8 @@ export const content: Record<Locale, SiteContent> = {
     },
     whyChoose: {
       eyebrow: "Why Choose SenecAI",
-      headline: "Introducing SenecAI: Our multi-disciplinary expertise — at your service",
+      headlineGold: "Introducing SenecAI",
+      headlineRest: ": Our multi-disciplinary expertise — at your service",
       subtitleLarge: "LEGAL. TECHNICAL. CYBERSECURITY. ONE GOVERNANCE HUB.",
       bodyPara1:
         "We are a team of legal, AI and cybersecurity experts helping companies comply with the AI Act, GDPR, and the wider EU digital rulebook.",
@@ -341,7 +342,8 @@ export const content: Record<Locale, SiteContent> = {
     },
     whyChoose: {
       eyebrow: "De ce SenecAI",
-      headline: "Prezentăm SenecAI: expertiza noastră multidisciplinară — în slujba ta",
+      headlineGold: "Prezentăm SenecAI",
+      headlineRest: ": expertiza noastră multidisciplinară — în slujba ta",
       subtitleLarge: "JURIDIC. TEHNIC. CYBERSECURITY. UN SINGUR GOVERNANCE HUB.",
       bodyPara1:
         "Suntem o echipă de experți juridici, AI și cybersecurity care ajută companiile să se conformeze cu AI Act, GDPR și restul cadrului digital european.",

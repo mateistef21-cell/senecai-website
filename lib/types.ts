@@ -36,7 +36,8 @@ export interface PillarContent {
 
 export interface WhyChooseContent {
   eyebrow: string;
-  headline: string;
+  headlineGold: string;
+  headlineRest: string;
   subtitleLarge: string;
   bodyPara1: string;
   bodyPara2: string;
