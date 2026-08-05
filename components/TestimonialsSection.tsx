@@ -9,7 +9,7 @@ export function TestimonialsSection() {
   const { t } = useLocale();
 
   return (
-    <Section id="testimonials" eyebrow={t.testimonials.eyebrow} title={t.testimonials.title} tone="cream">
+    <Section id="testimonials" title={t.testimonials.title} tone="cream">
       <div className="max-w-2xl rounded-2xl border border-dashed border-gold-300 bg-gold-50/60 p-6">
         <p className="text-[15px] leading-relaxed text-slate">{t.testimonials.body}</p>
       </div>

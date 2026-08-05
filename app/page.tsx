@@ -1,7 +1,6 @@
 import { Hero } from "@/components/Hero";
 import { WhyChooseSection } from "@/components/WhyChooseSection";
-import { WhyNowSection } from "@/components/WhyNowSection";
-import { WhoWeWorkWithSection } from "@/components/WhoWeWorkWithSection";
+import { WhyNowAndWhoWeWorkSection } from "@/components/WhyNowAndWhoWeWorkSection";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { OurServicesSection } from "@/components/OurServicesSection";
 import { MethodSection } from "@/components/MethodSection";
@@ -14,8 +13,7 @@ export default function Home() {
     <main>
       <Hero />
       <WhyChooseSection />
-      <WhyNowSection />
-      <WhoWeWorkWithSection />
+      <WhyNowAndWhoWeWorkSection />
       <TestimonialsSection />
       <OurServicesSection />
       <MethodSection />

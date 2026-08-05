@@ -28,8 +28,8 @@ export function MethodSection() {
   }, []);
 
   return (
-    <Section id="method" eyebrow={t.method.eyebrow} title={t.method.title} tone="cream">
-      <div ref={trackRef} className="relative">
+    <Section id="method" title={t.method.title} tone="cream">
+      <div ref={trackRef} className="relative mx-auto max-w-xl">
         <div className="absolute left-5 top-2 hidden h-[calc(100%-1rem)] w-px bg-gold-200 sm:block" aria-hidden="true" />
         <div
           className="absolute left-5 top-2 hidden w-px bg-gold-500 transition-[height] duration-150 ease-out sm:block"

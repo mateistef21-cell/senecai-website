@@ -49,12 +49,13 @@ export function WhyChooseSection() {
         {t.whyChoose.heading}
       </h2>
 
-      <div className="mx-auto mt-10 grid max-w-5xl gap-10 md:grid-cols-2 md:gap-14">
+      <p className="mx-auto mt-10 max-w-3xl text-center font-headline text-base font-bold uppercase tracking-[0.08em] text-ink-700 sm:text-lg">
+        {t.whyChoose.leftSubtitle}
+      </p>
+
+      <div className="mx-auto mt-8 grid max-w-5xl gap-10 md:grid-cols-2 md:gap-14">
         <div>
-          <p className="font-headline text-base font-bold uppercase tracking-[0.08em] text-ink-700 sm:text-lg">
-            {t.whyChoose.leftSubtitle}
-          </p>
-          <p className="mt-4 text-base leading-relaxed text-slate">{t.whyChoose.leftBody}</p>
+          <p className="text-base leading-relaxed text-slate">{t.whyChoose.leftBody}</p>
         </div>
         <div>
           <p className="text-base leading-relaxed text-slate">

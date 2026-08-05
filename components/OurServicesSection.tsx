@@ -16,7 +16,7 @@ export function OurServicesSection() {
         {t.whatWeDo.title}
       </h2>
 
-      <div className="mt-12 grid gap-4 lg:grid-cols-[340px_1fr] lg:gap-8">
+      <div className="mt-12 grid items-start gap-4 lg:grid-cols-[340px_1fr] lg:gap-8">
         <nav className="flex flex-col gap-1.5" aria-label="Services">
           {t.whatWeDo.items.map((navItem, i) => {
             const active = i === selected;
@@ -53,7 +53,7 @@ export function OurServicesSection() {
           })}
         </nav>
 
-        <div className="min-h-[420px] rounded-2xl border border-gold-200 bg-cream-50 p-7 sm:p-9">
+        <div className="rounded-2xl border border-gold-200 bg-cream-50 p-7 sm:p-9">
           <div key={selected} className="animate-fade-in-up">
             <h3 className="font-headline text-2xl font-extrabold text-ink">{item.title}</h3>
             <div className="mt-3 flex flex-wrap gap-2">

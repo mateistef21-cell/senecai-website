@@ -18,7 +18,7 @@ function point(radius: number, angleDeg: number) {
   return { x: 50 + radius * Math.cos(rad), y: 50 + radius * Math.sin(rad) };
 }
 
-export function GovernanceHubDiagram() {
+export function GovernanceHubDiagram({ compact = false }: { compact?: boolean }) {
   const { locale } = useLocale();
   const data = governanceHub[locale];
 
@@ -78,8 +78,14 @@ export function GovernanceHubDiagram() {
     return () => timeouts.forEach(clearTimeout);
   }, [started, geometry.length]);
 
+  const nodeWidthClass = compact ? "w-[58px] sm:w-[68px]" : "w-[92px] sm:w-[104px]";
+  const nodeLabelClass = compact ? "text-[8px] sm:text-[10px]" : "text-xs";
+  const nodePadClass = compact ? "px-1.5 py-1 sm:px-2 sm:py-1.5" : "px-2.5 py-2";
+  const hubTitleClass = compact ? "text-[6px] sm:text-[8px]" : "text-[9px] sm:text-[11px]";
+  const hubChipClass = compact ? "text-[4px] sm:text-[6px] px-1 py-0.5" : "text-[6px] sm:text-[8px] px-1.5 py-0.5";
+
   return (
-    <div ref={containerRef} className="mx-auto w-full max-w-xl">
+    <div ref={containerRef} className={`mx-auto w-full ${compact ? "max-w-xs" : "max-w-xl"}`}>
       <div className="relative aspect-square w-full">
         <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full overflow-visible" aria-hidden="true">
           {geometry.map(({ node, nodePoint, hubEdge, control }, i) => {
@@ -110,19 +116,19 @@ export function GovernanceHubDiagram() {
         </svg>
 
         <div
-          className={`absolute left-1/2 top-1/2 flex flex-col items-center justify-center rounded-full border border-gold-300 bg-white p-3 text-center transition-opacity duration-500 ${
-            started ? "opacity-100" : "opacity-0"
-          } ${glowing ? "animate-hub-glow" : "shadow-card"}`}
+          className={`absolute left-1/2 top-1/2 flex flex-col items-center justify-center rounded-full border border-gold-300 bg-white text-center transition-opacity duration-500 ${
+            compact ? "p-1.5 sm:p-2" : "p-3"
+          } ${started ? "opacity-100" : "opacity-0"} ${glowing ? "animate-hub-glow" : "shadow-card"}`}
           style={{ width: `${HUB_R * 2}%`, height: `${HUB_R * 2}%`, transform: "translate(-50%, -50%)" }}
         >
-          <p className="font-headline text-[9px] font-extrabold leading-tight text-ink sm:text-[11px]">{data.hubTitle}</p>
-          <div className="mt-1.5 grid grid-cols-2 gap-x-1.5 gap-y-1 sm:mt-2 sm:gap-x-2 sm:gap-y-1.5">
+          <p className={`font-headline font-extrabold leading-tight text-ink ${hubTitleClass}`}>{data.hubTitle}</p>
+          <div className={`grid grid-cols-2 ${compact ? "mt-1 gap-x-1 gap-y-0.5" : "mt-1.5 gap-x-1.5 gap-y-1 sm:mt-2 sm:gap-x-2 sm:gap-y-1.5"}`}>
             {data.capabilities.map((cap) => {
               const active = hoveredId ? geometry.find((g) => g.node.id === hoveredId)?.node.capabilityIds.includes(cap.id) : false;
               return (
                 <span
                   key={cap.id}
-                  className={`rounded-full px-1.5 py-0.5 text-[6px] font-semibold leading-none transition-colors duration-200 sm:text-[8px] ${
+                  className={`rounded-full font-semibold leading-none transition-colors duration-200 ${hubChipClass} ${
                     active ? "bg-gold-500 text-ink" : "bg-cream-100 text-slate-light"
                   }`}
                 >
@@ -146,7 +152,7 @@ export function GovernanceHubDiagram() {
               onFocus={() => setHoveredId(node.id)}
               onBlur={() => setHoveredId(null)}
               onClick={() => setHoveredId((h) => (h === node.id ? null : node.id))}
-              className={`absolute w-[92px] rounded-xl border bg-white px-2.5 py-2 text-center shadow-card transition-all duration-300 sm:w-[104px] ${
+              className={`absolute rounded-xl border bg-white text-center shadow-card transition-all duration-300 ${nodeWidthClass} ${nodePadClass} ${
                 node.mandatory ? "border-solid" : "border-dashed"
               } ${isHovered ? "z-20 scale-110 border-gold-500 shadow-pop" : "z-10 border-gold-300"}`}
               style={{
@@ -157,8 +163,8 @@ export function GovernanceHubDiagram() {
                 transitionDelay: revealed ? "0s" : `${i * 0.03}s`,
               }}
             >
-              <span className="block font-headline text-xs font-bold text-ink">{node.label}</span>
-              {!node.mandatory && (
+              <span className={`block font-headline font-bold text-ink ${nodeLabelClass}`}>{node.label}</span>
+              {!node.mandatory && !compact && (
                 <span className="mt-0.5 block text-[9px] font-medium uppercase tracking-wide text-gold-600">
                   {locale === "ro" ? "voluntar" : "voluntary"}
                 </span>
