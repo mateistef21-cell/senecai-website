@@ -80,6 +80,7 @@ export interface DeliveredColumn {
 
 export interface WhatWeDoContent {
   title: string;
+  helpWithLabel: string;
   items: WhatWeDoItem[];
   deliveredTitle: string;
   delivered: DeliveredColumn[];

@@ -90,6 +90,7 @@ export const content: Record<Locale, SiteContent> = {
     },
     whatWeDo: {
       title: "Our Services",
+      helpWithLabel: "What we help you with",
       items: [
         {
           icon: "inventory",
@@ -424,6 +425,7 @@ export const content: Record<Locale, SiteContent> = {
     },
     whatWeDo: {
       title: "Serviciile noastre",
+      helpWithLabel: "Cu ce te ajutăm",
       items: [
         {
           icon: "inventory",

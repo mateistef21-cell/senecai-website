@@ -5,6 +5,15 @@ import { useLocale } from "@/lib/LocaleContext";
 import { Section } from "./Section";
 import { Icon } from "./Icon";
 
+function CheckIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" className="shrink-0" aria-hidden="true">
+      <circle cx="9" cy="9" r="8" stroke="#C9A24B" strokeWidth="1.4" />
+      <path d="M5.5 9.2l2.2 2.2 4.8-4.8" stroke="#C9A24B" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 export function OurServicesSection() {
   const { t } = useLocale();
   const [selected, setSelected] = useState(0);
@@ -16,8 +25,8 @@ export function OurServicesSection() {
         {t.whatWeDo.title}
       </h2>
 
-      <div className="mt-12 grid items-start gap-4 lg:grid-cols-[340px_1fr] lg:gap-8">
-        <nav className="flex flex-col gap-1.5" aria-label="Services">
+      <div className="mt-10 overflow-x-auto border-b border-gold-200">
+        <nav className="flex min-w-max gap-1 sm:gap-2" aria-label="Services">
           {t.whatWeDo.items.map((navItem, i) => {
             const active = i === selected;
             return (
@@ -26,56 +35,50 @@ export function OurServicesSection() {
                 type="button"
                 onClick={() => setSelected(i)}
                 aria-current={active}
-                className={`flex items-start gap-3.5 rounded-xl px-4 py-3.5 text-left transition-all duration-200 ${
-                  active ? "border border-gold-400 bg-cream-50 shadow-card" : "border border-transparent hover:bg-cream-50/70"
+                className={`relative flex items-center gap-2 whitespace-nowrap px-3 pb-3.5 pt-2 text-sm font-semibold transition-colors sm:px-4 ${
+                  active ? "text-ink" : "text-slate-light hover:text-ink-700"
                 }`}
               >
+                <Icon name={navItem.icon} className={`h-4 w-4 ${active ? "text-gold-600" : "text-gold-300"}`} />
+                {navItem.title}
                 <span
-                  className={`flex shrink-0 items-center justify-center rounded-full bg-gold-100 text-gold-700 transition-all duration-200 ${
-                    active ? "h-10 w-10" : "h-8 w-8"
+                  className={`absolute inset-x-0 -bottom-px h-0.5 rounded-full transition-colors ${
+                    active ? "bg-gold-500" : "bg-transparent"
                   }`}
-                >
-                  <Icon name={navItem.icon} className={active ? "h-5 w-5" : "h-4 w-4"} />
-                </span>
-                <span className="min-w-0 flex-1">
-                  <span className="flex items-center gap-2">
-                    <span className={`font-headline text-[15px] leading-tight text-ink ${active ? "font-bold" : "font-semibold"}`}>
-                      {navItem.title}
-                    </span>
-                  </span>
-                  <span className="mt-0.5 block text-xs leading-relaxed text-slate-light">{navItem.short}</span>
-                </span>
-                <span className="shrink-0 font-headline text-[11px] font-bold text-gold-300">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
+                  aria-hidden="true"
+                />
               </button>
             );
           })}
         </nav>
+      </div>
 
-        <div className="max-w-2xl rounded-2xl border border-gold-200 bg-cream-50 p-7 sm:p-9">
-          <div key={selected} className="animate-fade-in-up">
-            <h3 className="font-headline text-2xl font-extrabold text-ink">{item.title}</h3>
-            <div className="mt-3 flex flex-wrap gap-2">
-              {item.badges.map((badge) => (
-                <span
-                  key={badge}
-                  className="rounded-pill border border-gold-400 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-gold-700"
-                >
-                  {badge}
-                </span>
-              ))}
-            </div>
-            <p className="mt-5 text-[15px] leading-relaxed text-slate">{item.details}</p>
-            <ul className="mt-5 flex flex-col gap-2.5">
-              {item.bullets.map((bullet) => (
-                <li key={bullet} className="flex gap-2.5 text-sm leading-relaxed text-ink-700">
-                  <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-gold-500" aria-hidden="true" />
-                  {bullet}
-                </li>
-              ))}
-            </ul>
+      <div key={selected} className="animate-fade-in-up mt-10 grid gap-6 lg:grid-cols-[1fr_1fr] lg:gap-12">
+        <div>
+          <h3 className="font-headline text-2xl font-extrabold text-ink sm:text-3xl">{item.title}</h3>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {item.badges.map((badge) => (
+              <span
+                key={badge}
+                className="rounded-pill border border-gold-400 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-gold-700"
+              >
+                {badge}
+              </span>
+            ))}
           </div>
+          <p className="mt-5 max-w-lg text-[15px] leading-relaxed text-slate">{item.details}</p>
+        </div>
+
+        <div className="rounded-2xl border border-gold-200 bg-cream-50 p-6 sm:p-7">
+          <p className="text-xs font-bold uppercase tracking-[0.14em] text-gold-600">{t.whatWeDo.helpWithLabel}</p>
+          <ul className="mt-3 divide-y divide-gold-200">
+            {item.bullets.map((bullet) => (
+              <li key={bullet} className="flex items-center gap-3 py-3.5 text-[15px] leading-snug text-ink-700">
+                <CheckIcon />
+                {bullet}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
 
