@@ -12,16 +12,13 @@ export function WhyNowAndWhoWeWorkSection() {
     <Section id="why-now" tone="cream">
       <div className="grid gap-14 lg:grid-cols-2 lg:gap-12">
         <div>
-          <div className="grid items-center gap-6 sm:grid-cols-2">
-            <div>
-              <h2 className="font-headline text-2xl font-extrabold leading-[1.15] tracking-tight text-ink sm:text-3xl">
-                {t.whyNow.title}
-              </h2>
-              <p className="mt-4 text-[15px] leading-relaxed text-slate">{t.whyNow.body}</p>
-            </div>
-            <div className="flex justify-center">
-              <GovernanceHubDiagram compact />
-            </div>
+          <h2 className="text-center font-headline text-2xl font-extrabold leading-[1.15] tracking-tight text-ink sm:text-3xl">
+            {t.whyNow.title}
+          </h2>
+          <p className="mx-auto mt-4 max-w-md text-center text-[15px] leading-relaxed text-slate">{t.whyNow.body}</p>
+
+          <div className="mt-8 flex justify-center">
+            <GovernanceHubDiagram compact />
           </div>
         </div>
 
