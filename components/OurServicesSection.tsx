@@ -53,7 +53,7 @@ export function OurServicesSection() {
           })}
         </nav>
 
-        <div className="rounded-2xl border border-gold-200 bg-cream-50 p-7 sm:p-9">
+        <div className="max-w-2xl rounded-2xl border border-gold-200 bg-cream-50 p-7 sm:p-9">
           <div key={selected} className="animate-fade-in-up">
             <h3 className="font-headline text-2xl font-extrabold text-ink">{item.title}</h3>
             <div className="mt-3 flex flex-wrap gap-2">
@@ -66,7 +66,7 @@ export function OurServicesSection() {
                 </span>
               ))}
             </div>
-            <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-slate">{item.details}</p>
+            <p className="mt-5 text-[15px] leading-relaxed text-slate">{item.details}</p>
             <ul className="mt-5 flex flex-col gap-2.5">
               {item.bullets.map((bullet) => (
                 <li key={bullet} className="flex gap-2.5 text-sm leading-relaxed text-ink-700">
