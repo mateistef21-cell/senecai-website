@@ -87,6 +87,45 @@ const paths: Record<IconKey, ReactNode> = {
       <path d="M9 17h6" />
     </>
   ),
+  // AI companies — neural network / connected nodes
+  "ai-companies": (
+    <>
+      <circle cx="5" cy="6" r="1.8" />
+      <circle cx="5" cy="18" r="1.8" />
+      <circle cx="12" cy="12" r="2.1" />
+      <circle cx="19" cy="6" r="1.8" />
+      <circle cx="19" cy="18" r="1.8" />
+      <path d="M6.6 7.1L10.3 10.6M6.6 16.9L10.3 13.4M13.7 10.6L17.4 7.1M13.7 13.4L17.4 16.9" />
+    </>
+  ),
+  // Technology companies — browser window / dashboard
+  "tech-companies": (
+    <>
+      <rect x="3.5" y="5" width="17" height="14" rx="1.8" />
+      <path d="M3.5 9h17" />
+      <circle cx="6" cy="7" r="0.5" fill="currentColor" stroke="none" />
+      <circle cx="8" cy="7" r="0.5" fill="currentColor" stroke="none" />
+      <path d="M6.5 15.5l2.5-3 2 2.2 3-3.7 2.5 3" />
+    </>
+  ),
+  // Regulated industries — modern building
+  "regulated-industries": (
+    <>
+      <path d="M5 21V8.5L12 4l7 4.5V21" />
+      <path d="M3 21h18" />
+      <path d="M9 21v-5h6v5" />
+      <path d="M9 11h1.2M13.8 11H15M9 14.5h1.2M13.8 14.5H15" />
+    </>
+  ),
+  // Enterprise AI adoption — collaboration + workflow
+  "enterprise-ai": (
+    <>
+      <circle cx="7" cy="7" r="2.3" />
+      <circle cx="17" cy="7" r="2.3" />
+      <path d="M3.5 18.5c0-2.5 1.8-4 3.5-4s3.5 1.5 3.5 4M13.5 18.5c0-2.5 1.8-4 3.5-4s3.5 1.5 3.5 4" />
+      <rect x="10.5" y="10.3" width="3" height="3" rx="0.6" transform="rotate(45 12 11.8)" />
+    </>
+  ),
 };
 
 export function Icon({ name, className = "" }: { name: IconKey; className?: string }) {

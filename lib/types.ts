@@ -10,7 +10,11 @@ export type IconKey =
   | "privacy"
   | "resilience"
   | "security"
-  | "audit";
+  | "audit"
+  | "ai-companies"
+  | "tech-companies"
+  | "regulated-industries"
+  | "enterprise-ai";
 
 export interface NavLink {
   label: string;
@@ -35,14 +39,29 @@ export interface PillarContent {
 }
 
 export interface WhyChooseContent {
-  eyebrow: string;
-  headlineGold: string;
-  headlineRest: string;
-  subtitleLarge: string;
-  bodyPara1: string;
-  bodyPara2: string;
-  floatingLine: string;
+  heading: string;
+  leftSubtitle: string;
+  leftBody: string;
+  rightBodyPrefix: string;
+  rightBodyBold: string;
+  rightBodySuffix: string;
   pillars: PillarContent[];
+}
+
+export interface WhyNowContent {
+  title: string;
+  body: string;
+}
+
+export interface WhoWeWorkWithCard {
+  icon: IconKey;
+  title: string;
+  description: string;
+}
+
+export interface WhoWeWorkWithContent {
+  title: string;
+  cards: WhoWeWorkWithCard[];
 }
 
 export interface WhatWeDoItem {
@@ -50,27 +69,26 @@ export interface WhatWeDoItem {
   title: string;
   short: string;
   details: string;
-  framework: string;
+  badges: string[];
   bullets: string[];
 }
 
+export interface DeliveredColumn {
+  label: string;
+  body: string;
+}
+
 export interface WhatWeDoContent {
-  eyebrow: string;
   title: string;
-  introHeadline: string;
-  introPara1: string;
-  introPara2: string;
   items: WhatWeDoItem[];
   deliveredTitle: string;
-  deliveredIntro: string;
-  delivered: string[];
-  deliveredClosing: string;
-  closingFooter: string;
+  delivered: DeliveredColumn[];
 }
 
 export interface MethodStep {
   number: string;
   title: string;
+  summary: string;
   body: string;
 }
 
@@ -78,8 +96,8 @@ export interface MethodContent {
   eyebrow: string;
   title: string;
   steps: MethodStep[];
-  tailoredBody: string;
-  onDemandTitle: string;
+  flexibleTitle: string;
+  flexibleBody: string;
   onDemand: { title: string; body: string }[];
 }
 
@@ -159,8 +177,8 @@ export interface SiteContent {
   nav: NavContent;
   hero: HeroContent;
   whyChoose: WhyChooseContent;
-  whyNow: PlaceholderContent;
-  whoWeWorkWith: PlaceholderContent;
+  whyNow: WhyNowContent;
+  whoWeWorkWith: WhoWeWorkWithContent;
   whatWeDo: WhatWeDoContent;
   method: MethodContent;
   team: TeamContent;

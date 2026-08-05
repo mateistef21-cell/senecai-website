@@ -3,7 +3,7 @@ import { WhyChooseSection } from "@/components/WhyChooseSection";
 import { WhyNowSection } from "@/components/WhyNowSection";
 import { WhoWeWorkWithSection } from "@/components/WhoWeWorkWithSection";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
-import { WhatWeDoSection } from "@/components/WhatWeDoSection";
+import { OurServicesSection } from "@/components/OurServicesSection";
 import { MethodSection } from "@/components/MethodSection";
 import { TeamSection } from "@/components/TeamSection";
 import { PlaceholderSection } from "@/components/PlaceholderSection";
@@ -17,7 +17,7 @@ export default function Home() {
       <WhyNowSection />
       <WhoWeWorkWithSection />
       <TestimonialsSection />
-      <WhatWeDoSection />
+      <OurServicesSection />
       <MethodSection />
       <TeamSection />
       <PlaceholderSection id="faq" section="faq" tone="cream" />

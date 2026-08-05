@@ -27,7 +27,7 @@ export function Hero() {
             <PillButton href="/tools" variant="outline" className="text-sm">
               {t.hero.secondaryCheck}
             </PillButton>
-            <PillButton href="/#what-we-do" variant="outline" className="text-sm">
+            <PillButton href="/#services" variant="outline" className="text-sm">
               {t.hero.secondaryHub}
             </PillButton>
           </div>
