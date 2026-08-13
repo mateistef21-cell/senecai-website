@@ -16,16 +16,34 @@ function initials(name: string) {
 
 export function TeamSection() {
   const { t } = useLocale();
+  const founder = t.team.members.find((m) => m.founder);
+  const rest = t.team.members.filter((m) => !m.founder);
 
   return (
     <Section id="team" eyebrow={t.team.eyebrow} title={t.team.title} tone="white">
+      {founder && (
+        <div className="mb-5 flex flex-col items-center gap-5 rounded-2xl border border-gold-400 bg-gold-50 p-7 text-center shadow-card sm:flex-row sm:text-left">
+          <div
+            className="relative flex h-24 w-24 shrink-0 items-center justify-center rounded-full border-2 border-dashed border-gold-300 bg-cream-100 text-xl font-headline font-extrabold text-gold-600"
+            role="img"
+            aria-label={t.team.photoPlaceholder}
+            title={t.team.photoPlaceholder}
+          >
+            {initials(founder.name)}
+          </div>
+          <div>
+            <p className="font-headline text-lg font-bold text-ink">{founder.name}</p>
+            <p className="mt-1 text-sm leading-relaxed text-slate">{founder.role}</p>
+            <p className="mt-3 text-xs italic leading-relaxed text-slate-light">{t.team.bioPlaceholder}</p>
+          </div>
+        </div>
+      )}
+
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {t.team.members.map((member) => (
+        {rest.map((member) => (
           <div
             key={member.name}
-            className={`flex flex-col items-center rounded-2xl border p-6 text-center shadow-card transition-shadow hover:shadow-pop ${
-              member.founder ? "border-gold-400 bg-gold-50" : "border-gold-200 bg-cream-50"
-            }`}
+            className="flex flex-col items-center rounded-2xl border border-gold-200 bg-cream-50 p-6 text-center shadow-card transition-shadow hover:shadow-pop"
           >
             <div
               className="relative flex h-20 w-20 items-center justify-center rounded-full border-2 border-dashed border-gold-300 bg-cream-100 text-lg font-headline font-extrabold text-gold-600"

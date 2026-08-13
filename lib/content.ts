@@ -244,6 +244,7 @@ export const content: Record<Locale, SiteContent> = {
         { name: "Tudor Dumitrașcu", role: "ISO 42001-certified consultant" },
         { name: "Marius Stanciu", role: "AI Act, GDPR, commercial, and energy lawyer" },
         { name: "Dr. Irina Raicu", role: "Brand specialist" },
+        { name: "Camelia Ionescu", role: "Social media expert, FOMO" },
       ],
     },
     testimonials: {
@@ -578,6 +579,7 @@ export const content: Record<Locale, SiteContent> = {
         { name: "Tudor Dumitrașcu", role: "Consultant certificat ISO 42001" },
         { name: "Marius Stanciu", role: "Avocat AI Act, GDPR, drept comercial și energetic" },
         { name: "Dr. Irina Raicu", role: "Specialist de brand" },
+        { name: "Camelia Ionescu", role: "Specialist social media, FOMO" },
       ],
     },
     testimonials: {
